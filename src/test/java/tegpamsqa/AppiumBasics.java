@@ -18,6 +18,7 @@ public class AppiumBasics {
     public void AppiumTest() throws MalformedURLException {
         ConfigLoader loader = new ConfigLoader();
         Properties applicationProp = loader.loadProperties("application.properties");
+
         /* invoke appium service programmatically
          for cross-system you need to adjust filepath, server and port*/
         AppiumDriverLocalService service = new AppiumServiceBuilder().usingDriverExecutable(new File("/opt/homebrew/bin/node")).withAppiumJS(new File("/opt/homebrew/lib/node_modules/appium/build/lib/main.js")).withIPAddress("127.0.0.1").usingPort(4723).build();
